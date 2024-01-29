@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+}
+
+:root {
+  --cyanColor: hsl(179, 62%, 43%);
+  --yellowColor: hsl(71, 73%, 54%);
+  --lightGrayColor: hsl(204, 43%, 93%);
+  --grayishBlueColor: hsl(218, 22%, 67%);
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--lightGrayColor);
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  width: 600px;
+}
+
+.up-container {
+  background-color: white;
+  display: grid;
+  border-radius: 10px;
+  padding: 20px;
+  gap: 10px;
+}
+
+.up-container h1 {
+  color: var(--cyanColor);
+  font-size: 1.5rem;
+}
+
+.up-container h2 {
+  color: var(--yellowColor);
+}
+
+.up-container p {
+  color: var(--grayishBlueColor);
+  width: 580px;
+  line-height: 25px;
+}
+
+.down-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 10px;
+  color: var(--lightGrayColor);
+}
+
+.left-section {
+  background-color: var(--cyanColor);
+  display: grid;
+  padding: 35px;
+  row-gap: 20px;
+}
+
+.left-section h1 {
+  font-size: 1.25rem;
+}
+
+.left-section span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--lightGrayColor);
+  margin-right: 8px;
+}
+
+.special-p {
+  color: rgb(212, 212, 212);
+  font-size: 0.9rem;
+}
+
+.left-section button {
+  background-color: var(--yellowColor);
+  color: var(--lightGrayColor);
+  border: none;
+  border-radius: 5px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  cursor: pointer;
+}
+
+.right-section {
+  background-color: hsl(179, 62%, 53%);
+  display: grid;
+  padding: 35px;
+}
+
+.right-section h1 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.right-section p {
+  color: rgb(220, 220, 220);
+}
+
+@media (max-width: 576px) {
+  .container {
+    display: flex;
+    max-width: 375px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .up-container {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+  }
+  .up-container p {
+    width: 340px;
+  }
+
+  .down-container {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+  }
+}
